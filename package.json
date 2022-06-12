@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-file-manager",
+  "version": "1.0.0",
+  "description": "cli file manager task2",
+  "main": "fileManagerApp.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src1/fileManagerApp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RebuyBoy/nodejs-file-manager.git"
+  },
+  "author": "Sergey M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RebuyBoy/nodejs-file-manager/issues"
+  },
+  "homepage": "https://github.com/RebuyBoy/nodejs-file-manager#readme"
+}
