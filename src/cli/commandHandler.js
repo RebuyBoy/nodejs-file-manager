@@ -14,11 +14,6 @@ import {
 const _commandsMap = getCommands();
 const successMessage = "operation was successful\n";
 
-function _handleOsInfo(flag) {
-  const osInfo = getOSInfo(flag);
-  printMessage(osInfo);
-}
-
 function getCommands() {
   return new Map(Object.entries({
     up: () => _handleUp(),
@@ -35,6 +30,11 @@ function getCommands() {
     decompress: (source, destination) => _handleDecompress(source, destination),
     os: (flag) => _handleOsInfo(flag),
   }));
+}
+
+function _handleOsInfo(flag) {
+  const osInfo = getOSInfo(flag);
+  printMessage(osInfo);
 }
 
 export function getCommand(command) {
@@ -96,11 +96,11 @@ async function _handleGetHash(source) {
 }
 
 async function _handleCompress(source, destination) {
-  compress(process.curDir, source, destination);
+  await compress(process.curDir, source, destination);
   printMessage(successMessage);
 }
 
 async function _handleDecompress(source, destination) {
-  decompress(process.curDir, source, destination);
+  await decompress(process.curDir, source, destination);
   printMessage(successMessage);
 }

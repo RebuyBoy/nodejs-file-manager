@@ -1,4 +1,4 @@
-import {cpus, EOL, homedir, userInfo, arch} from "os";
+import {arch, cpus, EOL, homedir, userInfo} from "os";
 
 export function getOSInfo(flag) {
   switch (flag.toLowerCase()) {
@@ -20,7 +20,7 @@ export function getOSInfo(flag) {
 function _getEOL() {
   return JSON.stringify(EOL);
 }
-//TODO +10 Get host machine CPUs info (overall amount of CPUS plus model and clock rate (in GHz) for each of them)
+
 function _getCpuInfo() {
   return cpus();
 }
@@ -36,4 +36,5 @@ function _getSystemUsername() {
 function _getArch() {
   return arch();
 }
+
 
